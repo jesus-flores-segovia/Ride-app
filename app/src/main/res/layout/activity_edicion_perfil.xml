@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.juanjo.rideapp.Usuario.EdicionPerfil"
+    android:background="@color/fondoVentanaPrincipal">
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/Edicion_perfil_avatar"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="30dp"
+                    android:contentDescription="@string/foto_de_perfil_actual_edicion_perfil"
+                    android:src="@drawable/user_default" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="15dp"
+                    android:contentDescription="@string/ruleta_para_cambiar_la_foto_edicion_perfil"
+                    android:onClick="cambiarAvatar"
+                    android:src="@drawable/edicion_perfil_cambioavatar" />
+            </LinearLayout>
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:hint="@string/contrasena_registro"
+                android:textColorHint="#cccccc"
+                android:background="@drawable/cuadrado_redondo_login_contrasena"
+                android:drawableStart="@mipmap/contrasenalogin"
+                android:textSize="14sp"
+                android:drawablePadding="5dp"
+                android:textColor="@color/blanco"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:inputType="textPassword"
+                android:id="@+id/Edicion_perfil_contrasena"
+                android:layout_marginBottom="15dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="@string/repetir_contrasena_registro"
+                    android:textColorHint="#cccccc"
+                    android:background="@drawable/cuadrado_redondo_login_contrasena"
+                    android:drawableStart="@mipmap/contrasenalogin"
+                    android:textSize="14sp"
+                    android:drawablePadding="5dp"
+                    android:textColor="@color/blanco"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:inputType="textPassword"
+                    android:id="@+id/Edicion_perfil_contrasena_repetida"
+                    android:layout_marginBottom="15dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/Edicion_perfil_nombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/cuadrado_redondo_login_nombre"
+                    android:drawablePadding="5dp"
+                    android:drawableStart="@mipmap/usuariologin"
+                    android:hint="@string/nombre_registro"
+                    android:inputType="textPersonName"
+                    android:paddingEnd="10dp"
+                    android:paddingStart="10dp"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="@string/apellidos_registro"
+                    android:background="@drawable/cuadrado_redondo_login_apellidos"
+                    android:drawableStart="@mipmap/usuariologin"
+                    android:textSize="14sp"
+                    android:drawablePadding="5dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:id="@+id/Edicion_perfil_apellidos"
+                    android:layout_marginBottom="15dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="@string/correo_registro"
+                    android:background="@drawable/cuadrado_redondo_login_correo"
+                    android:drawableStart="@mipmap/correo"
+                    android:textSize="14sp"
+                    android:drawablePadding="5dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:id="@+id/Edicion_perfil_correo"
+                    android:inputType="textEmailAddress"
+                    android:layout_marginBottom="20dp"/>
+            </LinearLayout>
+
+
+            <ScrollView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <MultiAutoCompleteTextView
+                        android:id="@+id/Edicion_perfil_descripcion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cuadrado_redondo_login_nombre"
+                        android:hint="@string/descripcion_edicion_perfil"
+                        android:padding="10dp"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/Edicion_perfil_editar"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="40dp"
+                    android:onClick="updateUsuario"
+                    android:src="@drawable/edicio_perfil_editar" />
+
+                <ImageView
+                    android:id="@+id/Edicion_perfil_atras"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="110dp"
+                    android:onClick="atrasEdicion"
+                    android:src="@drawable/edicion_perfil_atras" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>
